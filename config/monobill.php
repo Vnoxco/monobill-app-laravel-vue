@@ -7,5 +7,5 @@ return [
     'secret' => env('APP_SECRET'),
     'scopes' => [
         //Define the scopes that the application requires here...
-    ]gir
+    ]
 ];

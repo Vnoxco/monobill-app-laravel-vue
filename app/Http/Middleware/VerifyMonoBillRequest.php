@@ -15,7 +15,7 @@ class VerifyMonoBillRequest
 
         if(!$api->verifyRequest())
         {
-//            die('This is only accessible from within MonoBill.');
+            die('This is only accessible from within MonoBill.');
         }
 
         return $next($request);
