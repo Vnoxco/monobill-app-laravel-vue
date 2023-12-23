@@ -27,7 +27,7 @@ class InstallController extends Controller
             $storeId = $request->query('store_id');
 
             //Redirect the user back to MonoBill Admin, specifically to this app page
-            return redirect('https://' . $storeDomain . '/admin/apps/' . $request->query('app_id'));
+            return redirect('https://' . $storeDomain . '/admin/apps/' . config('monobill.id'));
         } else {
             //The installation request was not valid, show a message to the user.
             die('This request is invalid.');
