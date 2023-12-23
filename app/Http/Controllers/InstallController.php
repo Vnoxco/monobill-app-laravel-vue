@@ -12,7 +12,7 @@ class InstallController extends Controller
     {
         $api = new MonoBillAPI(config('monobill.id'), config('monobill.secret'));
         $api->setScopes(config('monobill.scopes'));
-        $api->setCallbackUrl(\Illuminate\Support\Facades\Request::getHttpHost() . '/install/complete');
+        $api->setCallbackUrl(url('/install/complete'));
         return redirect($api->getInstallURL());
     }
 
